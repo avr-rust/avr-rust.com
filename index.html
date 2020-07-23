@@ -1,59 +1,104 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>avr-rust :: Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>foo</h1>
 
-    <div class="container">
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
+    <style>
+      .avr-rust-links li {
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body class="text-center">
+    <h1>The avr-rust Project Homepage</h1>
+
+    <p>
+      An open source project adding AVR microcontroller support to Rust.
+    </p>
+
+    <img src="res/images/avr-rust-logo.png" />
+
+    <p>
+      The avr-rust compiler, once existing as a <a href="https://github.com/avr-rust/rust">fork</a>, has since been merged into upstream Rust as of July 2020. <br />
+      The standard Rust nightly compiler can be used to compile crates for AVR - no compiling from source required.
+    </p>
+
+    <p>
+      The recommended way to use avr-rust is via <a href="#installation-rustup">rustup</a> using the official nightly version of the Rust compiler.
+    </p>
+
+    <hr />
+
+    <div class="container avr-rust-links">
+      <div class="row">
+        <div class="col-md-3">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Free</h4>
+            <h3 class="my-0 font-weight-normal">Links and Resources</h3>
           </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-          </div>
+          <ul class="pull-left" style="list-style-type: none">
+            <li>
+              <a href="https://github.com/avr-rust">
+                <img src="res/images/github-logo.png" style="width: 100px">
+                <strong>GitHub</strong>
+              </a>
+            </li>
+            <li>
+              <a href="https://gitter.im/avr-rust/Lobby">
+                <div>
+                  <img src="res/images/gitter-logo.png" style="width: 100px">
+                  <strong>for discussion</strong>
+                </div>
+              </a>
+            </li>
+            <li style="list-style-type: circle">
+              <a href="https://github.com/avr-rust/awesome-avr-rust" target="_blank"><strong>list of avr-rust projects</strong></a>
+            </li>
+          </ul>
         </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Pro</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Enterprise</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>30 users included</li>
-              <li>15 GB of storage</li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+        <div class="col-lg-3 pull-right">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+              <div class="card-header">
+                <h3 class="my-0 font-weight-normal">Installation Instructions</h3>
+              </div>
+              <div class="card-body">
+                <a href="#installation-rustup"><button type="button" class="btn btn-lg btn-block btn-primary">Install with Rustup</button></a>
+                <hr />
+                <a href="https://github.com/avr-rust/rust/wiki"><button type="button" class="btn btn-lg btn-block btn-primary">Compile from Source</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div style="height: 700px">
+    </div>
+
+    <hr />
+
+    <h2 id="installation-rustup">Installation via Rustup</h2>
+
+    <div class="container">
+      <ol>
+        <li>Install <a href="https://rustup.rs/" target="_blank">rustup</a></li>
+        <li>
+          Install Rust <code>nightly</code> and <code>rust-src</code> via Rustup by typing the following snippet into a terminal.
+          The <code>rust-src</code> component is required to allow Rust to compile <code>libcore</code> for any chip being targeted.
+          <pre><code>
+            $ rustup component add nightly rust-src
+          </code></pre>
+        </li>
+        <li>Done!
+      </ol>
+
+      <hr />
+
+      <p>
+        AVR can be enabled for a crate by running <code>$ rustup override set nightly</code></li> in a terminal inside the root directory of the desired crate.
+      </p>
     </div>
   </body>
 </html>
