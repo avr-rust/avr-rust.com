@@ -3,124 +3,76 @@
   <head>
     <title>avr-rust :: Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <style>
-      .avr-rust-links li {
-        padding-bottom: 10px;
-      }
-    </style>
   </head>
 
-  <body class="text-center">
-    <h1>The avr-rust Project Homepage</h1>
+  <body>
+    <div class="container">
+      <div class="text-center">
+        <h1>The avr-rust Project Homepage</h1>
 
-    <p>
-      An open source project adding AVR microcontroller support to Rust.
-    </p>
+        <p>
+          An open source project adding AVR microcontroller support to Rust.
+        </p>
 
-    <img src="res/images/avr-rust-logo.png" />
+        <img src="res/images/avr-rust-logo.png" />
 
-    <p>
-      The avr-rust compiler, once existing as a <a href="https://github.com/avr-rust/rust">fork</a>, has since been merged into upstream Rust as of July 2020. <br />
-      The standard Rust nightly compiler can be used to compile crates for AVR - no compiling from source required.
-    </p>
+        <p>
+          The avr-rust compiler, once existing as a <a href="https://github.com/avr-rust/rust">fork</a>, has since been merged into upstream Rust as of July 2020. <br />
+          The standard Rust nightly compiler can be used to compile crates for AVR - no compiling from source required.
+        </p>
 
-    <p>
-      The recommended way to use avr-rust is via <a href="#installation-rustup">rustup</a> using the official nightly version of the Rust compiler.
-    </p>
-
-    <hr />
-
-    <div class="container avr-rust-links">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card-header">
-            <h3 class="my-0 font-weight-normal">Links and Resources</h3>
-          </div>
-          <ul class="pull-left" style="list-style-type: none">
-            <li>
-              <a href="https://github.com/avr-rust">
-                <img src="res/images/github-logo.png" style="width: 100px">
-                <strong>GitHub</strong>
-              </a>
-            </li>
-            <li>
-              <a href="https://gitter.im/avr-rust/Lobby">
-                <div>
-                  <img src="res/images/gitter-logo.png" style="width: 100px">
-                  <strong>for discussion</strong>
-                </div>
-              </a>
-            </li>
-            <li style="list-style-type: circle">
-              <a href="https://github.com/avr-rust/awesome-avr-rust" target="_blank"><strong>list of avr-rust projects</strong></a>
-            </li>
-            <li style="list-style-type: circle">
-              <a href="https://github.com/rust-lang/rust/labels/O-AVR" target="_blank"><strong>compiler issue tracker</strong></a>
-            </li>
-            <li style="list-style-type: circle">
-              <a href="https://github.com/avr-rust/rust/issues" target="_blank"><strong>legacy compiler issue tracker (read only)</strong></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3">
-          <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 box-shadow">
-              <a href="https://book.avr-rust.com/" target="_blank"><button type="button" class="btn btn-lg btn-block btn-default">Open the Guidebook</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 pull-right">
-          <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 box-shadow">
-              <div class="card-header">
-                <h3 class="my-0 font-weight-normal">Installation Instructions</h3>
-              </div>
-              <div class="card-body">
-                <a href="#installation-rustup"><button type="button" class="btn btn-lg btn-block btn-primary">Install with Rustup</button></a>
-                <hr />
-                <a href="https://github.com/avr-rust/rust/wiki"><button type="button" class="btn btn-lg btn-block btn-primary">Compile from Source</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p>
+          The recommended way to use avr-rust is via <a href="#installation-rustup">rustup</a> using the official nightly version of the Rust compiler.
+        </p>
       </div>
-    </div>
 
-    <hr />
+      <hr />
 
-    <div class="container">
-      <a href="https://github.com/rust-lang/rust/labels/O-AVR"><button type="button" class="btn btn-lg btn-block btn-primary">Report a compiler issue</button></a>
-      <p><small>
-        AVR compiler issues are tracked on the official Rust GitHub repository. After creation, the triage team will tag the issue as <a href="https://github.com/rust-lang/rust/labels/O-AVR" target="_blank">O-AVR</a> for you.
-      </small></p>
-    </div>
+      <h2 class="font-weight-normal">Links and Resources</h2>
+      <div class="list-group">
+        <a href="https://book.avr-rust.com/" target="_blank" class="list-group-item">Guidebook</a>
+        <a href="https://github.com/avr-rust" class="list-group-item">
+          <img src="res/images/github-logo.png" style="width: 50px">
+          GitHub
+        </a>
+        <a href="https://gitter.im/avr-rust/Lobby" class="list-group-item">
+          <img src="res/images/gitter-logo.png" style="width: 100px">
+          for discussion
+        </a>
+        <a href="https://github.com/avr-rust/awesome-avr-rust" target="_blank" class="list-group-item">list of avr-rust projects</a>
+        <a href="https://github.com/rust-lang/rust/labels/O-AVR" target="_blank" class="list-group-item">compiler issue tracker</a>
+        <a href="https://github.com/avr-rust/rust/issues" target="_blank" class="list-group-item">legacy compiler issue tracker (read only)</a>
+      </div>
 
+      <h2>Installation Instructions</h2>
+      <p>See <a href="https://book.avr-rust.com/002-installing-the-compiler.html#installing-or-building-from-source">guide book</a> to know more.</p>
 
-    <div style="height: 700px">
-    </div>
-
-    <hr />
-
-    <h2 id="installation-rustup">Installation via Rustup</h2>
-
-    <div class="container">
+      <h3 id="installation-via-rustup">Installation via Rustup</h3>
       <ol>
         <li>Install <a href="https://rustup.rs/" target="_blank">rustup</a></li>
         <li>
           Install Rust <code>nightly</code> and <code>rust-src</code> via Rustup by typing the following snippet into a terminal.
           The <code>rust-src</code> component is required to allow Rust to compile <code>libcore</code> for any chip being targeted.
-          <pre><code>
-            $ rustup component add nightly rust-src
-          </code></pre>
+          <pre><code>$ rustup component add nightly rust-src</code></pre>
         </li>
-        <li>Done!
+        <li>Done!</li>
       </ol>
 
       <hr />
 
       <p>
-        AVR can be enabled for a crate by running <code>$ rustup override set nightly</code></li> in a terminal inside the root directory of the desired crate.
+        AVR can be enabled for a crate by running <code>$ rustup override set nightly</code> in a terminal inside the root directory of the desired crate.
+      </p>
+
+      <h3 id="compile-from-source">Compile from source</h3>
+      See <a href="https://rustc-dev-guide.rust-lang.org/getting-started.html">Rust development instruction</a>.
+
+      <h2>Report a compiler issue</h2>
+
+      <p>Create <a href="https://github.com/rust-lang/rust/labels/O-AVR">an issue on rust repository</a>.
+      </p>
+      <p>
+        AVR compiler issues are tracked on the official Rust GitHub repository. After creation, the triage team will tag the issue as <a href="https://github.com/rust-lang/rust/labels/O-AVR" target="_blank">O-AVR</a> for you.
       </p>
     </div>
   </body>
